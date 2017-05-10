@@ -1,0 +1,39 @@
+{
+  "name": "danish-architecture-centre/wordpress-demo",
+  "description": "Demoing Wordpress with a content hub",
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://wpackagist.org"
+    }, {
+      "type": "composer",
+      "url": "https://wp-languages.github.io"
+    }, {
+      "type": "path",
+      "url": "../wp-dac-content-hub"
+    }
+  ],
+  "require": {
+    "johnpbloch/wordpress": "^4.7",
+    "koodimonni-language/core-da_dk": "^4.7",
+    "php": ">=5.4.0",
+    "danish-architecture-centre/dac-content-hub": "^0.1",
+    "wpackagist-plugin/wordpress-importer": ">=0.6.3",
+    "wpackagist-plugin/debug-bar": "^0.8.4",
+    "wpackagist-theme/twentyseventeen": "^1.2"
+  },
+  "extra": {
+    "wordpress-install-dir": "wp",
+    "dropin-paths": {
+      "wp-content/languages/": ["vendor:koodimonni-language"],
+      "wp-content/languages/plugins/": ["vendor:koodimonni-plugin-language"],
+      "wp-content/languages/themes/": ["vendor:koodimonni-theme-language"]
+    }
+  },
+  "authors": [
+    {
+      "name": "Kraen Hansen",
+      "email": "kraen@socialsquare.dk"
+    }
+  ]
+}
