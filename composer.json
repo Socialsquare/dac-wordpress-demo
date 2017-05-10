@@ -9,8 +9,28 @@
       "type": "composer",
       "url": "https://wp-languages.github.io"
     }, {
-      "type": "vcs",
-      "url": "https://github.com/Socialsquare/wp-dac-content-hub"
+      "type":"package",
+      "package": {
+        "name": "danish-architecture-centre/dac-content-hub",
+        "version":"0.1",
+        "type": "wordpress-plugin",
+        "dist": {
+          "url": "https://github.com/Socialsquare/wp-dac-content-hub/archive/master.zip",
+          "type": "zip"
+        }
+      }
+    }, {
+      "type":"package",
+      "package": {
+        "name": "danish-architecture-centre/dac-content-hub",
+        "version":"dev-master",
+        "type": "wordpress-plugin",
+        "dist": {
+          "url": "../wp-dac-content-hub",
+          "type": "path",
+          "reference": "0.1"
+        }
+      }
     }
   ],
   "require": {
