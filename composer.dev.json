@@ -9,8 +9,8 @@
       "type": "composer",
       "url": "https://wp-languages.github.io"
     }, {
-      "type": "vcs",
-      "url": "https://github.com/Socialsquare/wp-dac-content-hub"
+      "type": "path",
+      "url": "../wp-dac-content-hub"
     }
   ],
   "require": {
