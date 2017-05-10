@@ -18,6 +18,12 @@
  * @package WordPress
  */
 
+/**
+ * Requires the composer autoloader
+ * @see https://getcomposer.org/doc/01-basic-usage.md#autoloading
+ */
+require_once __DIR__ . '/vendor/autoload.php';
+
 define('WP_CONTENT_DIR', dirname( __FILE__ ) . '/wp-content');
 define('WP_CONTENT_URL', 'http://' . $_SERVER['HTTP_HOST'] . '/wp-content');
 

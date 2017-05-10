@@ -7,12 +7,6 @@
  */
 
 /**
- * Requires the composer autoloader
- * @see https://getcomposer.org/doc/01-basic-usage.md#autoloading
- */
-require_once __DIR__ . '/vendor/autoload.php';
-
-/**
  * Tells WordPress to load the WordPress theme and output it.
  *
  * @var bool

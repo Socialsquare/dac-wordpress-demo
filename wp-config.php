@@ -27,8 +27,8 @@
  */
 $table_prefix = 'wp_';
 
-if(file_exists('wp-config-local.php')) {
-  require 'wp-config-local.php';
+if(file_exists(__DIR__ . '/wp-config-local.php')) {
+  require __DIR__ . '/wp-config-local.php';
 } else {
   $db_url = parse_url(getenv('DATABASE_URL') ?: getenv('CLEARDB_DATABASE_URL'));
 
