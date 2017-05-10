@@ -9,26 +9,23 @@
       "type": "composer",
       "url": "https://wp-languages.github.io"
     }, {
-      "type":"package",
-      "package": {
-        "name": "danish-architecture-centre/dac-content-hub",
-        "version":"0.1",
-        "type": "wordpress-plugin",
-        "dist": {
-          "url": "https://github.com/Socialsquare/wp-dac-content-hub/archive/master.zip",
-          "type": "zip"
-        }
-      }
+      "type": "vcs",
+      "url": "https://github.com/Socialsquare/wp-dac-content-hub"
     }, {
       "type":"package",
       "package": {
         "name": "danish-architecture-centre/dac-content-hub",
-        "version":"dev-master",
+        "version":"dev-master-local",
         "type": "wordpress-plugin",
         "dist": {
           "url": "../wp-dac-content-hub",
           "type": "path",
           "reference": "0.1"
+        },
+        "require": {
+          "php": "^7.0",
+          "prismic/php-sdk": "3.*",
+          "composer/installers": "~1.0"
         }
       }
     }
@@ -37,7 +34,7 @@
     "johnpbloch/wordpress": "^4.7",
     "koodimonni-language/core-da_dk": "^4.7",
     "php": ">=5.4.0",
-    "danish-architecture-centre/dac-content-hub": "^0.1",
+    "danish-architecture-centre/dac-content-hub": "dev-master",
     "wpackagist-plugin/wordpress-importer": ">=0.6.3",
     "wpackagist-plugin/debug-bar": "^0.8.4",
     "wpackagist-theme/twentyseventeen": "^1.2"
