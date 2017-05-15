@@ -126,12 +126,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Socialsquare/wp-dac-content-hub.git",
-                "reference": "065c402db2a49eccd5974e846c693a051a861675"
+                "reference": "5b7271b284af832b6c695ab9da550973d8a4f2dd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Socialsquare/wp-dac-content-hub/zipball/065c402db2a49eccd5974e846c693a051a861675",
-                "reference": "065c402db2a49eccd5974e846c693a051a861675",
+                "url": "https://api.github.com/repos/Socialsquare/wp-dac-content-hub/zipball/5b7271b284af832b6c695ab9da550973d8a4f2dd",
+                "reference": "5b7271b284af832b6c695ab9da550973d8a4f2dd",
                 "shasum": ""
             },
             "require": {
@@ -151,10 +151,10 @@
             ],
             "description": "Connecting WordPress with a content hub",
             "support": {
-                "source": "https://github.com/Socialsquare/wp-dac-content-hub/tree/master",
+                "source": "https://github.com/Socialsquare/wp-dac-content-hub/tree/dev-master",
                 "issues": "https://github.com/Socialsquare/wp-dac-content-hub/issues"
             },
-            "time": "2017-05-10 08:14:21"
+            "time": "2017-05-15 11:02:32"
         },
         {
             "name": "guzzlehttp/guzzle",
