@@ -1,0 +1,30 @@
+version: '2'
+services:
+
+  web:
+    image: reload/drupal-apache-fpm
+    volumes_from:
+      - webroot
+    links:
+      - php:fpm
+
+  php:
+    image: wodby/wordpress-php
+    volumes_from:
+      - webroot
+    links:
+      - db
+    environment:
+      DATABASE_URL: mysql://wordpress:wordpress@db/wordpress
+  db:
+    image: mariadb:10
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: wordpress
+      MYSQL_PASSWORD: wordpress
+
+  webroot:
+    image: tianon/true
+    volumes:
+      - './:/var/www/web'
