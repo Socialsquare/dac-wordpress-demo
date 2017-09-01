@@ -1,56 +1,50 @@
 {
-  "name": "danish-architecture-centre/wordpress-demo",
-  "description": "Demoing Wordpress with a content hub",
-  "repositories": [
-    {
-      "type": "composer",
-      "url": "https://wpackagist.org"
-    }, {
-      "type": "composer",
-      "url": "https://wp-languages.github.io"
-    }, {
-      "type": "vcs",
-      "url": "https://github.com/Socialsquare/wp-dac-content-hub"
-    }, {
-      "type":"package",
-      "package": {
-        "name": "danish-architecture-centre/dac-content-hub",
-        "version":"dev-master-local",
-        "type": "wordpress-plugin",
-        "dist": {
-          "url": "../wp-dac-content-hub",
-          "type": "path",
-          "reference": "0.1"
-        },
-        "require": {
-          "php": "^7.0",
-          "prismic/php-sdk": "3.*",
-          "composer/installers": "~1.0"
+    "name": "snipon/wordpress",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Simon Larsson",
+            "email": "me@simon-larsson.se"
         }
-      }
+    ],
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://wpackagist.org"
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "dac/dac-content-hub",
+                "version": "1.0",
+                "type": "wordpress-plugin",
+                "source": {
+                    "url": "git@github.com:Socialsquare/wp-dac-content-hub.git",
+                    "type": "git",
+                    "reference": "origin/DCH-8-refactor"
+                },
+                "require": {
+                    "prismic/php-sdk": "^3",
+                    "composer/installers": "~1.0",
+                    "twig/twig": "^2.4"
+                }
+            }
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "johnpbloch/wordpress": "^4.8",
+        "wpackagist-plugin/debug-bar": "^0.9.0",
+        "dac/dac-content-hub": "1.0",
+        "wpackagist-plugin/kint-debugger": "^1.2",
+        "wpackagist-theme/twentyseventeen": "^1.3"
+    },
+    "extra": {
+        "wordpress-install-dir": "public/wp",
+        "installer-paths": {
+            "public/wp-content/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
+            "public/wp-content/plugins/{$name}/": ["type:wordpress-plugin"],
+            "public/wp-content/themes/{$name}/": ["type:wordpress-theme"]
+        }
     }
-  ],
-  "require": {
-    "johnpbloch/wordpress": "^4.7",
-    "koodimonni-language/core-da_dk": "^4.7",
-    "php": ">=5.4.0",
-    "danish-architecture-centre/dac-content-hub": "dev-master",
-    "wpackagist-plugin/wordpress-importer": ">=0.6.3",
-    "wpackagist-plugin/debug-bar": "^0.8.4",
-    "wpackagist-theme/twentyseventeen": "^1.2"
-  },
-  "extra": {
-    "wordpress-install-dir": "wp",
-    "dropin-paths": {
-      "wp-content/languages/": ["vendor:koodimonni-language"],
-      "wp-content/languages/plugins/": ["vendor:koodimonni-plugin-language"],
-      "wp-content/languages/themes/": ["vendor:koodimonni-theme-language"]
-    }
-  },
-  "authors": [
-    {
-      "name": "Kraen Hansen",
-      "email": "kraen@socialsquare.dk"
-    }
-  ]
 }
